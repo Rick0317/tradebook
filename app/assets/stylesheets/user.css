@@ -1,0 +1,8 @@
+.account-page .account-page__inner {
+  width: 980px;
+  margin-top: auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px, solid, #ddd;
+  border-radius: 5px;
+}
