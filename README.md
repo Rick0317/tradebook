@@ -48,10 +48,10 @@ has_one   :purchaser
 
 # Purchaser
 
-| purchaser  |         |
-| ---------- | ------- |
-| user_id    |         |
-| address_id |         |
+| purchaser  |            |
+| ---------- | ---------- |
+| user       | references |
+| address    | references |
 
 # Associations
 has_one : book

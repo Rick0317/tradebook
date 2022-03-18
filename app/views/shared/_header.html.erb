@@ -1,0 +1,16 @@
+<header>
+  <div class = "app_name">
+    TradeBook
+  </div>
+  <div class = "nav">
+    <ul class="lists-right">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.username, "#", class: "user-username" %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, class: "user-logout" %></li>
+      <% else %>
+        <li><%= link_to "Log in", user_session_path, class: "user-login" %></li>
+        <li><%= link_to "Sign up", new_user_registration_path, class: "user-signup" %></li>
+      <% end %>
+    </ul>  
+  </div>
+</header>

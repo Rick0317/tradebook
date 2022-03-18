@@ -1,0 +1,15 @@
+.app_name{
+  color: aquamarine;
+  font:100px;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+}
+.user-login{
+  border: 3px solid black;
+}
+.user-signup{
+  border: 3px solid black;
+}

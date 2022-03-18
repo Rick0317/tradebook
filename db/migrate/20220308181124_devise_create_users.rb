@@ -8,8 +8,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :encrypted_password, null: false, default: ""
       t.string :username,           null: false, default: ""
       t.text   :profile,            null: false
-      t.integer :grade
-      t.integer :major
+      t.integer :grade_id
+      t.integer :major_id
 
       ## Recoverable
       t.string   :reset_password_token
