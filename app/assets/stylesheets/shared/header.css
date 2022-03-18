@@ -13,3 +13,7 @@
 .user-signup{
   border: 3px solid black;
 }
+#char_T{
+  visibility: inherit;
+  color: black;
+}
