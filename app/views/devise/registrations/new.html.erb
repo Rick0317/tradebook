@@ -1,13 +1,19 @@
 <h2>Sign up</h2>
 
-<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+<%= form_with(model: @user, url: user_registration_path, local: true) do |f| %>
   <%= render "shared/error_messages", model: f.object %>
 
   <div class="field">
+    <div>
+    Your email 
+    </div>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
+    <div>
+    Password
+    </div>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -15,15 +21,24 @@
   </div>
 
   <div class="field">
+    <div>
+    Password Confirmation
+    </div>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.text_area :username, autofocus: true %>
+    <div>
+    Username
+    </div>
+    <%= f.text_area :username, autofocus: true, placeholder: "ex) Rick03" %>
   </div>
 
   <div class="field">
-    <%= f.text_area :profile, autofocus: true %>
+    <div>
+    Profile
+    </div>
+    <%= f.text_area :profile, autofocus: true, placeholder: "ex) I'm from Japan..." %>
   </div>
 
   <div class="field">
