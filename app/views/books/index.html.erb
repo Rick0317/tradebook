@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<%= @books.each do |book|%>
+  <%= book.title  %>
+  <%= book.price %>
+  <%= book.quality_id %>
+  <%= book.user.username %>
+<% end %>
+
+<%= link_to(new_book_path) do %>
+  <div>Register your Book!</div>
+<% end %>

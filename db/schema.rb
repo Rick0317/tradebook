@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2022_03_17_222248) do
     t.string "title", default: "", null: false
     t.integer "quality_id", null: false
     t.integer "price", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
