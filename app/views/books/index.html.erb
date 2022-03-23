@@ -1,10 +1,17 @@
 <%= render "shared/header" %>
 
 <%= @books.each do |book|%>
-  <%= book.title  %>
-  <%= book.price %>
-  <%= book.quality_id %>
-  <%= book.user.username %>
+<ul>
+  <li>
+    <%= book.title  %>
+    <%= book.price %>
+    <%= Quality.data[book.quality_id - 1][:name] %>
+    <%= book.user.username %>
+    <%= link_to(book_path(book.id)) do %>
+      <div>Check Out This Book!</div>
+    <% end %>
+  </li>
+</ul>
 <% end %>
 
 <%= link_to(new_book_path) do %>

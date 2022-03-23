@@ -1,0 +1,18 @@
+<%= form_with(model: @book, local: true) do |f| %>
+  <div>
+    Tell us your book's title
+    <%= f.text_area :title, autofocus: true, placeholder: "ex) The magic of England..." %> 
+  </div>
+  <div>
+    How much is the book?
+    <%= f.number_field :price, autofocus: true, placeholder: "ex) 300" %>
+  </div> 
+  <div>
+    How is the quality of the book?
+    <%= f.collection_select(:quality_id, Quality.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Register this book!" %>
+  </div>
+
+<% end%>

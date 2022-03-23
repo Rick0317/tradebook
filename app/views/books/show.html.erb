@@ -1,0 +1,18 @@
+<div>
+  The title of this book
+  <%= @book.title %>
+</div>
+<div>
+  The price of this book
+  <%= @book.price %>
+</div>
+<div>
+  The quality of this book
+  <%= Quality.data[@book.quality_id - 1][:name] %>
+</div>
+<div>
+  <%= link_to "Editing this book", edit_book_path(@book.id), method: :get %>
+</div>
+<div>
+  <%= link_to "Delete this book", book_path(@book.id), method: :delete %>
+</div>
