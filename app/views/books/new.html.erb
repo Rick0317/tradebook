@@ -4,15 +4,19 @@ This is so New!!
 <%= form_with(model: @book, local: true) do |f| %>
   <div>
     Tell us your book's title
-    <%= f.text_area :title, autofocus: true, placeholder: "ex) The magic of England..." %> 
+    <%= f.text_area :title, autofocus: true, class: "book-title-form" , placeholder: "ex) The magic of England..." %> 
   </div>
   <div>
     How much is the book?
-    <%= f.number_field :price, autofocus: true, placeholder: "ex) 300" %>
+    <%= f.number_field :price, autofocus: true, class: "book-price-form" , placeholder: "ex) 300" %>
   </div> 
   <div>
     How is the quality of the book?
     <%= f.collection_select(:quality_id, Quality.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+  </div>
+  <div>
+    Upload the image of the book here!
+    <%= f.file_field :image, class: "image-form" %>
   </div>
   <div class="actions">
     <%= f.submit "Register this book!" %>

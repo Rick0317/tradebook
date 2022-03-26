@@ -1,11 +1,32 @@
+.header-frame{
+  text-align: center;
+}
 .app_name{
   color: aquamarine;
-  font:100px;
+  font-size: 15px;
   text-align: center;
   padding: 10px;
   margin: auto;
-  width: 50%;
-  border: 3px solid black;
+  width: 40%;
+  border: 3px solid white;
+  border-radius: 25px;
+  letter-spacing: 20px;
+}
+.user-name{
+  color: aliceblue;
+}
+.user-username{
+  font-size: 20px;
+  color: brown;
+  text-decoration: none;
+}
+.log-out{
+  color: aliceblue;
+}
+.user-logout{
+  font-size: 20px;
+  color: brown;
+  text-decoration: none;
 }
 .user-login{
   border: 3px solid black;
@@ -15,5 +36,18 @@
 }
 #char_T{
   visibility: inherit;
-  color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+#char_B{
+  visibility: inherit;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.lists-right{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
 }

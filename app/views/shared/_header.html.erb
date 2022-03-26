@@ -1,16 +1,18 @@
 <header>
-  <div class = "app_name">
-    <small id="char_T">T</small>rade<small id="char_B">B</small>ook
-  </div>
-  <div class = "nav">
-    <ul class="lists-right">
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.username, "#", class: "user-username" %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: "delete" ,class: "user-logout" %></li>
-      <% else %>
-        <li><%= link_to "Log in", new_user_session_path, class: "user-login" %></li>
-        <li><%= link_to "Sign up", new_user_registration_path, class: "user-signup" %></li>
-      <% end %>
-    </ul>  
+  <div class = "header-frame">
+    <div class = "app_name">
+      <small id="char_T">T</small>rade<small id="char_B">B</small>ook
+    </div>
+    <div class = "nav">
+      <ul class="lists-right">
+        <% if user_signed_in? %>
+          <li class = "user-name"> Hello <%= link_to current_user.username, "#", class: "user-username" %>! How are you doing today?</li>
+          <li class = "log-out">Wanna log out?   <%= link_to "Log out", destroy_user_session_path, method: "delete" ,class: "user-logout" %></li>
+        <% else %>
+          <li><%= link_to "Log in", new_user_session_path, class: "user-login" %></li>
+          <li><%= link_to "Sign up", new_user_registration_path, class: "user-signup" %></li>
+        <% end %>
+      </ul>  
+    </div>
   </div>
 </header>

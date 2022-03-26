@@ -1,0 +1,39 @@
+body{
+  background-color: #080b14;
+}
+.register-book-url{
+  text-decoration: none;
+}
+.register-book{
+  font-size: 30px;
+  color: aquamarine;
+}
+.books{
+  list-style-type: none;
+}
+.each-book{
+  color: aliceblue;
+  border: 3px solid white;
+  border-radius: 20px;
+  width: 30%;
+}
+.book-info{
+  list-style-type: none;
+}
+.book-title{
+  color: coral;
+  font-size: 20px;
+}
+.book-price{
+  color: cornflowerblue;
+  font-size: 20px;
+
+}
+.book-quality{
+  color: darkseagreen;
+  font-size: 20px;
+}
+.to-show-url{
+  color: orange;
+  text-decoration: none;
+}
