@@ -2,24 +2,24 @@
 This is so New!!
 </div>
 <%= form_with(model: @book, local: true) do |f| %>
-  <div>
-    Tell us your book's title
-    <%= f.text_area :title, autofocus: true, class: "book-title-form" , placeholder: "ex) The magic of England..." %> 
+  <div class = "book-title-form">
+    予約を入れたい日付を右のように半角で入力してください！
+    <%= f.text_area :title, autofocus: true, class: "book-title-form" , placeholder: "ex) 20220421 (2022年4月21日)" %> 
   </div>
-  <div>
-    How much is the book?
-    <%= f.number_field :price, autofocus: true, class: "book-price-form" , placeholder: "ex) 300" %>
+  <div class = "book-title-form">
+    いくら払いたいですか？
+    <%= f.number_field :price, autofocus: true, class: "book-price-form" , placeholder: "ex) 10 dollar" %>
   </div> 
-  <div>
-    How is the quality of the book?
+  <div class = "book-title-form">
+    この蘭は適当に選んでください
     <%= f.collection_select(:quality_id, Quality.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
   </div>
-  <div>
-    Upload the image of the book here!
+  <div class = "book-title-form">
+    ヘアスタイルのイメージを登録してください
     <%= f.file_field :image, class: "image-form" %>
   </div>
   <div class="actions">
-    <%= f.submit "Register this book!" %>
+    <%= f.submit "この内容で予約！" %>
   </div>
 
 <% end%>

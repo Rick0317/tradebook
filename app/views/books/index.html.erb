@@ -1,17 +1,17 @@
 <%= render "shared/header" %>
 <div class = "register-book-url">
   <%= link_to(new_book_path) do %>
-    <div class = "register-book">Register your Book!</div>
+    <div class = "register-book">予約を入れてください！</div>
   <% end %>
 </div>
 <%= @books.each do |book|%>
 <ul class ="books" >
   <li class = "each-book">
     <ul class = "book-info">
-      <li> The title of this book: <a class = "book-title"> <%= book.title%> </a></li>
+      <li> The title of this book: <a class = "日付（半角で）"> <%= book.title%> </a></li>
       <li> The price of this book: <a class = "book-price"> <%= book.price %></a></li>
-      <li> The Qualityof this book: <a class = "book-quality"> <%= Quality.data[book.quality_id - 1][:name] %></a></li>
-      <li> <%= image_tag book.image.variant(resize: '300x300'), class: "book-image" if book.image.attached? %> </li>
+      <li> The Qualityof this book: <a class = "これは適当に選んでください。"> <%= Quality.data[book.quality_id - 1][:name] %></a></li>
+      <li> <%= image_tag book.image.variant(resize: '300x300'), class: "ヘアカットのイメージ" if book.image.attached? %> </li>
       <li> by <%= book.user.username %></li>
       <li><%= link_to(book_path(book.id)) do %>
             <div class= "to-show-url">Check Out This Book!</div>
