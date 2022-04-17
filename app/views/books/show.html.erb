@@ -11,8 +11,8 @@
   <%= Quality.data[@book.quality_id - 1][:name] %>
 </div>
 <div>
-  <%= link_to "Editing this book", edit_book_path(@book.id), method: :get %>
+  <%= link_to "Editing this book", "#", method: :get %>
 </div>
 <div>
-  <%= link_to "Delete this book", book_path(@book.id), method: :delete %>
+  <%= link_to "Delete this book", "#", method: :delete %>
 </div>
