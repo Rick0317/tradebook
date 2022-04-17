@@ -4,7 +4,7 @@ This is so New!!
 <%= form_with(model: @book, local: true) do |f| %>
   <div class = "book-title-form">
     予約を入れたい日付を右のように半角で入力してください！
-    <%= f.text_area :title, autofocus: true, class: "book-title-form" , placeholder: "ex) 20220421 (2022年4月21日)" %> 
+    <%= f.text_area :title, autofocus: true, class: "book-title" , placeholder: "ex) 20220421 (2022年4月21日)" %> 
   </div>
   <div class = "book-title-form">
     いくら払いたいですか？
